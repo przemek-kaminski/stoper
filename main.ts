@@ -19,7 +19,10 @@ let czas_na_stoperze = 0
 let blokada = 0
 blokada = 0
 czas_na_stoperze = 0
-loops.everyInterval(1000, function () {
+basic.forever(function () {
+	
+})
+loops.everyInterval(1001, function () {
     if (blokada == 1) {
         czas_na_stoperze += 1
     }
@@ -53,9 +56,6 @@ loops.everyInterval(1000, function () {
             led.unplot(index + 2, index)
         }
     }
-})
-basic.forever(function () {
-	
 })
 loops.everyInterval(100, function () {
     if (blokada == 1) {
